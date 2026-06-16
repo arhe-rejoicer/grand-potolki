@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Гранд — натяжные потолки и комплектующие в Казани</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#7CC517; --green-d:#65A50E; --green-l:#92D830; --green-ink:#2c4d06;
+    --ink:#15170f; --ink2:#43463b; --muted:#797d6e;
+    --bg:#ffffff; --soft:#f4f7ec; --line:#e7ebdc;
+    --dark:#121310; --gold:#d8a441;
+    --maxw:1180px; --shadow:0 24px 60px -24px rgba(40,60,10,.28);
+    --r:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg); color:var(--ink); font-family:"Manrope",system-ui,sans-serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+  a{color:inherit; text-decoration:none}
+  h1,h2,h3{font-family:"Montserrat",sans-serif; letter-spacing:-.02em; line-height:1.05}
+
+  .btn{display:inline-flex; align-items:center; gap:9px; cursor:pointer; border:none;
+    font-family:"Montserrat",sans-serif; font-size:14px; font-weight:800; letter-spacing:.02em;
+    text-transform:uppercase; padding:15px 26px; border-radius:100px; transition:.22s; white-space:nowrap}
+  .btn-green{background:var(--green); color:#fff; box-shadow:0 10px 26px -8px rgba(124,197,23,.6)}
+  .btn-green:hover{background:var(--green-d); transform:translateY(-2px)}
+  .btn-ghost{background:transparent; color:var(--ink); border:2px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--green); color:var(--green-d)}
+
+  header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
+    backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+  .nav{display:flex; align-items:center; justify-content:space-between; height:74px; gap:20px}
+  .logo img{height:46px; width:auto; border-radius:9px; display:block}
+  .nav-links{display:flex; gap:30px; font-size:15px; font-weight:600; color:var(--ink2)}
+  .nav-links a:hover{color:var(--green-d)}
+  .nav-right{display:flex; align-items:center; gap:18px}
+  .nav-right .ph{font-family:"Montserrat",sans-serif; font-weight:800; font-size:16px}
+
+  .hero{padding:70px 0 80px}
+  .hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:54px; align-items:center}
+  .badge{display:inline-flex; align-items:center; gap:8px; background:var(--soft);
+    color:var(--green-ink); font-weight:700; font-size:13px; padding:8px 15px; border-radius:100px; margin-bottom:22px}
+  .badge b{color:var(--green-d)}
+  .hero h1{font-size:clamp(36px,5.4vw,62px); font-weight:800}
+  .hero h1 .hl{color:var(--green-d)}
+  .hero .lead{margin-top:22px; font-size:clamp(16px,1.9vw,19px); color:var(--ink2); max-width:46ch}
+  .hero-cta{margin-top:32px; display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+  .hero-rating{margin-top:30px; display:flex; align-items:center; gap:14px}
+  .hero-rating .big{font-family:"Montserrat",sans-serif; font-weight:900; font-size:40px; color:var(--ink); line-height:1}
+  .stars{color:var(--green); letter-spacing:2px; font-size:15px}
+  .hero-rating small{display:block; color:var(--muted); font-size:13px; margin-top:2px}
+
+  .hero-photo{position:relative}
+  .hero-photo .blob{position:absolute; inset:-6% -4% -10% 6%; background:var(--green);
+    border-radius:36px; transform:rotate(-3deg); opacity:.9}
+  .hero-photo img{position:relative; width:100%; border-radius:24px; display:block;
+    box-shadow:var(--shadow); aspect-ratio:4/3; object-fit:cover}
+  .hero-photo .tag{position:absolute; right:-10px; bottom:18px; z-index:3; background:#fff;
+    border-radius:14px; padding:12px 16px; box-shadow:var(--shadow); font-size:13px; font-weight:700}
+  .hero-photo .tag b{display:block; font-family:"Montserrat",sans-serif; font-weight:900; color:var(--green-d); font-size:18px}
+
+  .strip{background:var(--green); color:#fff}
+  .strip .wrap{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; padding:28px 24px}
+  .strip .it b{font-family:"Montserrat",sans-serif; font-weight:900; font-size:26px; font-style:italic; display:block}
+  .strip .it span{font-size:13.5px; opacity:.92; font-weight:500}
+
+  .sec{padding:84px 0}
+  .sec.soft{background:var(--soft)}
+  .head{max-width:62ch; margin-bottom:46px}
+  .head.center{margin:0 auto 46px; text-align:center}
+  .head .kick{font-family:"Montserrat",sans-serif; font-weight:800; text-transform:uppercase;
+    letter-spacing:.08em; font-size:13px; color:var(--green-d); margin-bottom:12px}
+  .head h2{font-size:clamp(28px,4.2vw,44px); font-weight:800}
+  .head p{margin-top:16px; color:var(--ink2); font-size:17px}
+
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
+  .card{background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:32px 28px; transition:.25s}
+  .card:hover{transform:translateY(-6px); box-shadow:var(--shadow); border-color:transparent}
+  .card .ic{width:54px; height:54px; border-radius:14px; background:var(--soft); color:var(--green-d);
+    display:grid; place-items:center; margin-bottom:18px}
+  .card h3{font-size:21px; font-weight:800; margin-bottom:10px}
+  .card p{color:var(--ink2); font-size:15px}
+
+  /* works gallery */
+  .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+  .ph-card{border-radius:var(--r); overflow:hidden; position:relative; box-shadow:var(--shadow); background:#000}
+  .ph-card img{width:100%; height:100%; display:block; aspect-ratio:4/5; object-fit:cover; transition:.4s}
+  .ph-card:hover img{transform:scale(1.05)}
+  .ph-card .cap{position:absolute; left:0; right:0; bottom:0; padding:40px 22px 18px; color:#fff;
+    font-family:"Montserrat",sans-serif; font-weight:800; font-size:17px;
+    background:linear-gradient(to top, rgba(0,0,0,.78), transparent)}
+
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:54px; align-items:center}
+  .about p{font-size:18px; color:var(--ink2); line-height:1.7} .about p+p{margin-top:18px}
+  .checks{margin-top:26px; display:grid; gap:13px}
+  .check{display:flex; gap:12px; align-items:flex-start; font-size:15.5px; font-weight:500}
+  .check svg{flex:none; margin-top:3px; color:var(--green-d)}
+  .about-logo{background:var(--green); border-radius:var(--r); padding:48px; display:grid; place-items:center; box-shadow:var(--shadow)}
+  .about-logo img{width:min(360px,80%); border-radius:14px}
+
+  .quotes{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
+  .quote{background:#fff; border:1px solid var(--line); border-radius:var(--r); padding:28px}
+  .quote .st{color:var(--green); letter-spacing:2px; margin-bottom:14px}
+  .quote .q{color:var(--ink2); font-size:15.5px; line-height:1.65}
+  .quote .who{margin-top:20px; display:flex; align-items:center; gap:12px}
+  .quote .av{width:42px; height:42px; border-radius:50%; background:var(--green); color:#fff;
+    font-family:"Montserrat",sans-serif; font-weight:800; display:grid; place-items:center}
+  .quote .who b{font-weight:700; font-size:15px} .quote .who small{display:block; color:var(--muted); font-size:12.5px}
+  .ph-note{margin-top:24px; font-size:13px; color:var(--muted)}
+
+  /* contacts / how to find */
+  .contacts-grid{display:grid; grid-template-columns:1fr 1fr; gap:46px; align-items:center}
+  .contacts-photo img{width:100%; border-radius:var(--r); display:block; box-shadow:var(--shadow); aspect-ratio:4/3; object-fit:cover}
+  .loc{display:grid; gap:14px}
+  .loc-card{display:flex; gap:14px; align-items:flex-start; background:#fff; border:1px solid var(--line);
+    border-radius:14px; padding:18px 20px; transition:.2s}
+  .loc-card:hover{border-color:var(--green); box-shadow:var(--shadow)}
+  .loc-card .pin{width:42px; height:42px; flex:none; border-radius:11px; background:var(--soft); color:var(--green-d); display:grid; place-items:center}
+  .loc-card b{font-family:"Montserrat",sans-serif; font-weight:800; font-size:16px; display:block}
+  .loc-card a{color:var(--green-d); font-weight:700; font-size:16px}
+  .loc-hours{margin-top:18px; color:var(--ink2); font-weight:600}
+
+  .cta{background:var(--green); color:#fff; border-radius:26px; padding:56px 48px; position:relative; overflow:hidden}
+  .cta::after{content:""; position:absolute; right:-8%; top:-60%; width:50%; height:200%; background:rgba(255,255,255,.1); transform:rotate(18deg)}
+  .cta-grid{display:grid; grid-template-columns:1fr 1fr; gap:46px; align-items:center; position:relative; z-index:1}
+  .cta h2{font-size:clamp(28px,3.8vw,40px); font-weight:800; color:#fff}
+  .cta p{margin-top:14px; opacity:.95}
+  form{display:grid; gap:13px; background:#fff; padding:28px; border-radius:var(--r)}
+  .field input{width:100%; background:var(--soft); border:1px solid var(--line); border-radius:12px;
+    padding:14px 16px; font-family:inherit; font-size:15px; color:var(--ink)}
+  .field input:focus{outline:none; border-color:var(--green)}
+  form .btn{justify-content:center}
+  .ok{display:none; background:var(--soft); color:var(--green-ink); padding:14px; border-radius:12px; font-size:14px; font-weight:600}
+  form small{color:var(--muted); font-size:12px}
+
+  footer{background:var(--ink); color:#cfd2c6; padding:54px 0 36px}
+  .foot{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px}
+  .foot img{height:50px; border-radius:9px; margin-bottom:16px}
+  .foot h4{font-family:"Montserrat",sans-serif; color:var(--green-l); font-size:13px; letter-spacing:.06em; text-transform:uppercase; margin-bottom:16px}
+  .foot a,.foot p{display:block; color:#cfd2c6; font-size:15px; margin-bottom:9px}
+  .foot a:hover{color:#fff}
+  .copy{margin-top:40px; padding-top:22px; border-top:1px solid rgba(255,255,255,.12); color:#8b8e80; font-size:13px; display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+
+  .reveal{opacity:0; transform:translateY(26px); transition:.7s ease}
+  .reveal.in{opacity:1; transform:none}
+
+  @media(max-width:900px){
+    .nav-links{display:none}
+    .hero-grid,.about-grid,.cta-grid,.contacts-grid{grid-template-columns:1fr; gap:36px}
+    .hero-photo{order:-1}
+    .strip .wrap{grid-template-columns:repeat(2,1fr); gap:24px 18px}
+    .grid3,.gallery,.quotes{grid-template-columns:1fr}
+    .foot{grid-template-columns:1fr 1fr}
+    .nav-right .ph{display:none}
+  }
+  @media(max-width:520px){.foot{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo"><img src="assets/grand-logo.jpg" alt="Гранд — потолки и комплектующие"></a>
+    <nav class="nav-links">
+      <a href="#services">Услуги</a>
+      <a href="#works">Работы</a>
+      <a href="#about">О нас</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="nav-right">
+      <a class="ph" href="tel:+79061120313">+7 (906) 112-03-13</a>
+      <a class="btn btn-green" href="#contacts">Бесплатный замер</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge">★ <b>4.9</b> · 90 отзывов · 3 салона в Казани</span>
+      <h1>Натяжные потолки<br>в Казани <span class="hl">под ключ</span></h1>
+      <p class="lead">Потолки, свет и комплектующие от мастерской «Гранд». Замер, расчёт и монтаж — обычно за один день. Ровно, чисто, по договору.</p>
+      <div class="hero-cta">
+        <a class="btn btn-green" href="#contacts">Рассчитать стоимость</a>
+        <a class="btn btn-ghost" href="tel:+79061120313">Позвонить мастеру</a>
+      </div>
+      <div class="hero-rating">
+        <div class="big">4.9</div>
+        <div><div class="stars">★★★★★</div><small>90 отзывов — реальные потолки, а не реклама</small></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="blob"></div>
+      <img src="assets/work-lines.png" alt="Натяжной потолок с парящими световыми линиями от Гранд">
+      <div class="tag">Наша работа<b>Парящие линии света</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="strip">
+  <div class="wrap">
+    <div class="it"><b>4.9</b><span>средняя оценка</span></div>
+    <div class="it"><b>90</b><span>отзывов на Яндексе</span></div>
+    <div class="it"><b>3</b><span>салона в Казани</span></div>
+    <div class="it"><b>8–20</b><span>работаем без выходных</span></div>
+  </div>
+</section>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="head">
+      <div class="kick">Что мы делаем</div>
+      <h2>Потолки, свет и комплектующие</h2>
+      <p>Всё для потолка в одном месте — от полотна до светильников и подсветки.</p>
+    </div>
+    <div class="grid3">
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="4" rx="1"/><path d="M5 8v12M19 8v12M3 20h18"/></svg></div>
+        <h3>Натяжные потолки</h3>
+        <p>Матовые, сатиновые, глянцевые и многоуровневые. Бесшовный монтаж, ровная плоскость без щелей и провисаний — на любой площади.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="9" r="5"/><path d="M9 17h6M10 20h4M12 1v1"/></svg></div>
+        <h3>Свет и подсветка</h3>
+        <p>Парящие линии, встроенные светильники, контурная подсветка, «звёздное небо». Рассчитаем количество света под площадь, высоту и назначение комнаты — по нормам освещённости.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+        <h3>Дизайн интерьеров</h3>
+        <p>Поможем спроектировать потолок и освещение так, чтобы они работали на весь интерьер, а не сами по себе.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec soft" id="works">
+  <div class="wrap">
+    <div class="head center">
+      <div class="kick">Наши работы</div>
+      <h2>Результат, который видно с порога</h2>
+      <p>Парящие линии света, глянцевое «звёздное небо», линейная подсветка — реальные потолки наших клиентов в Казани.</p>
+    </div>
+    <div class="gallery">
+      <div class="ph-card reveal"><img src="assets/work-lines.png" alt="Парящие световые линии"><div class="cap">Парящие линии света</div></div>
+      <div class="ph-card reveal"><img src="assets/grand-photo1.jpg" alt="Глянцевый потолок звёздное небо"><div class="cap">Глянец «звёздное небо»</div></div>
+      <div class="ph-card reveal"><img src="assets/work-hall.png" alt="Линейный свет в коридоре"><div class="cap">Линейный свет в коридоре</div></div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a class="btn btn-green" href="https://vk.com/grandpotolki">Смотреть все работы во ВКонтакте</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="kick" style="font-family:Montserrat;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:13px;color:var(--green-d);margin-bottom:12px">О мастерской</div>
+      <h2 style="font-size:clamp(28px,4.2vw,44px);font-weight:800;margin-bottom:22px">Репутация, которую видно в отзывах</h2>
+      <p>«Гранд» — мастерская натяжных потолков и комплектующих в Казани, три салона в городе. 4.9 и 90 отзывов на Яндекс.Картах — это сделанные потолки и довольные хозяева, а не реклама.</p>
+      <p>Замерим, рассчитаем и смонтируем под ключ — аккуратно, по договору и в срок.</p>
+      <div class="checks">
+        <div class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Бесплатный замер и расчёт сметы</div>
+        <div class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Работаем по договору с гарантией</div>
+        <div class="check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Чистый монтаж — обычно за один день</div>
+      </div>
+    </div>
+    <div class="about-logo">
+      <img src="assets/grand-logo.jpg" alt="Логотип Гранд">
+    </div>
+  </div>
+</section>
+
+<section class="sec soft" id="reviews">
+  <div class="wrap">
+    <div class="head">
+      <div class="kick">Отзывы</div>
+      <h2>4.9 из 5 — за реальные потолки</h2>
+      <p>Несколько слов от хозяев. Все 90 отзывов — на Яндекс.Картах и в нашем ВКонтакте.</p>
+    </div>
+    <div class="quotes">
+      <div class="quote reveal"><div class="st">★★★★★</div><div class="q">«Сделали потолок с парящими линиями в гостиной за день. Ровно, чисто, мусор за собой убрали. Свет именно такой, как на эскизе.»</div><div class="who"><div class="av">А</div><div><b>Алия Г.</b><small>гостиная, парящие линии</small></div></div></div>
+      <div class="quote reveal"><div class="st">★★★★★</div><div class="q">«Заказывали "звёздное небо" в детскую. Помогли с подбором, всё объяснили по свету. Результатом очень довольны, рекомендую.»</div><div class="who"><div class="av">М</div><div><b>Марат С.</b><small>звёздное небо + подсветка</small></div></div></div>
+      <div class="quote reveal"><div class="st">★★★★★</div><div class="q">«Двухуровневый потолок на кухне и в коридоре. Аккуратные мастера, цена как договаривались, без сюрпризов. Спасибо!»</div><div class="who"><div class="av">Е</div><div><b>Елена Р.</b><small>многоуровневый потолок</small></div></div></div>
+    </div>
+    <p class="ph-note">↑ Это примеры-заглушки. Здесь подставим ваши настоящие отзывы. <a href="https://vk.com/grandpotolki" style="color:var(--green-d);font-weight:600">Читать отзывы во ВКонтакте →</a></p>
+  </div>
+</section>
+
+<!-- CONTACTS / HOW TO FIND -->
+<section class="sec" id="contacts">
+  <div class="wrap">
+    <div class="head">
+      <div class="kick">Контакты</div>
+      <h2>Три салона в Казани</h2>
+      <p>Приходите в ближайший салон или вызовите мастера на бесплатный замер.</p>
+    </div>
+    <div class="contacts-grid">
+      <div class="contacts-photo">
+        <img src="assets/storefront.png" alt="Салон Гранд в Казани">
+      </div>
+      <div>
+        <div class="loc">
+          <div class="loc-card">
+            <div class="pin"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+            <div><b>ул. Журналистов, 6</b><a href="tel:+79061120313">+7 (906) 112-03-13</a></div>
+          </div>
+          <div class="loc-card">
+            <div class="pin"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+            <div><b>ул. Хусаина Мавлютова, 44</b><a href="tel:+79050261480">+7 (905) 026-14-80</a></div>
+          </div>
+          <div class="loc-card">
+            <div class="pin"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6-7-11a7 7 0 0114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+            <div><b>ул. Восход, 45а</b><a href="tel:+79625596411">+7 (962) 559-64-11</a></div>
+          </div>
+        </div>
+        <div class="loc-hours">Режим работы: ежедневно с 8:00 до 20:00</div>
+      </div>
+    </div>
+
+    <div class="cta" style="margin-top:50px">
+      <div class="cta-grid">
+        <div>
+          <h2>Узнайте цену вашего потолка</h2>
+          <p>Оставьте номер — перезвоним, ответим на вопросы и запишем на бесплатный замер в удобное время.</p>
+        </div>
+        <form id="leadForm">
+          <div class="field"><input type="text" name="name" placeholder="Как вас зовут" required></div>
+          <div class="field"><input type="tel" name="phone" placeholder="Телефон" required></div>
+          <button class="btn btn-green" type="submit">Жду звонка</button>
+          <div class="ok" id="ok">Спасибо! Перезвоним в течение рабочего дня.</div>
+          <small>Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</small>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <img src="assets/grand-logo.jpg" alt="Гранд">
+        <p style="max-width:34ch">Натяжные потолки, свет и комплектующие в Казани. Три салона. 4.9 ★ · 90 отзывов.</p>
+      </div>
+      <div>
+        <h4>Салоны</h4>
+        <a href="tel:+79061120313">Журналистов, 6 — +7 (906) 112-03-13</a>
+        <a href="tel:+79050261480">Х. Мавлютова, 44 — +7 (905) 026-14-80</a>
+        <a href="tel:+79625596411">Восход, 45а — +7 (962) 559-64-11</a>
+        <a href="https://vk.com/grandpotolki">ВКонтакте</a>
+      </div>
+      <div>
+        <h4>Режим работы</h4>
+        <p>Ежедневно</p>
+        <p>с 8:00 до 20:00</p>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© Гранд · потолки и комплектующие · Казань</span>
+      <span>Натяжные потолки · светильники · дизайн интерьеров</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.getElementById('leadForm').addEventListener('submit',function(e){
+    e.preventDefault(); this.querySelector('button').style.display='none';
+    document.getElementById('ok').style.display='block';
+  });
+</script>
+</body>
+</html>
